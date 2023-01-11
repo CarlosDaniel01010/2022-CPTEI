@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Página de Clientes</title>
+</head>
+
+<body>
+    <section class="section_logo is-flex is-justify-content-space-around has-background-success-dark" id="section_logo">
+        <div class="container_logo">
+            <a href="#">
+                <img class="logo pt-1" src="../img/Free_Sample_By_Wix (1).jpg" width="110">
+            </a>
+        </div>
+        <div class="container_nav pt-5">
+            <nav class="navbar pb-4 has-background-success-dark" role="navigation" aria-label="main navigation">
+                <div id="navbarBasicExample" class="navbar-menu is-size-5">
+                    <div class="navbar-start ">
+                        <a href="home.html" class="navbar-item has-text-white has-background-success-dark">
+                            <span class="icon is-small mx-2 ">
+                                <i class="fas fa-home" aria-hidden="true"></i>
+                            </span>
+                            <span>
+                                Inicio
+                            </span>
+                        </a>
+                        <div class="navbar-item dropdown is-hoverable">
+                            <div class="dropdown-trigger">
+                                <li class="is-inline" aria-haspopup="true" aria-controls="dropdown-menu">
+                                    <a class="navbar-link has-text-white has-background-success-dark">
+                                        Cliente
+                                    </a>
+                                </li>
+                            </div>
+                            <div class="dropdown-menu" role="menu" id="dropdown-menu-cliente">
+                                <div class="dropdown-content">
+                                    <a href="cliente.html" class="dropdown-item ">
+                                        Cadastrar Cliente
+                                    </a>
+                                    <a class="dropdown-item">
+                                        Listar Clientes
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar-item dropdown is-hoverable">
+                            <div class="dropdown-trigger">
+                                <li class="is-inline" aria-haspopup="true" aria-controls="dropdown-menu">
+                                    <a href="#" class="navbar-link has-text-white has-background-success-dark">
+                                        Funcionário
+                                    </a>
+                                </li>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu-funcionario" role="menu">
+                                <div class="dropdown-content">
+                                    <a class="dropdown-item" href="funcionario.html">
+                                        Cadastrar Funcionário
+                                    </a>
+                                    <a class="dropdown-item" href="funcionario_listar.html">
+                                        Listar Funcionário
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar-item dropdown is-hoverable">
+                            <div class="dropdown-trigger">
+                                <li class="is-inline" aria-haspopup="true" aria-controls="dropdown-menu">
+                                    <a href="#" class="navbar-link has-text-white has-background-success-dark">
+                                        Veículo
+                                    </a>
+                                </li>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu-veiculo" role="menu">
+                                <div class="dropdown-content">
+                                    <a href="veiculo.html" class="dropdown-item">
+                                        Cadastrar Veículo
+                                    </a>
+                                    <a href="veiculo_listar.html" class="dropdown-item">
+                                        Listar Veículos
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar-item dropdown is-hoverable">
+                            <div class="dropdown-trigger">
+                                <li class="is-inline">
+                                    <a href="#" class="navbar-link has-text-white has-background-success-dark">
+                                        Estada
+                                    </a>
+                                </li>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu-estada" role="menu">
+                                <div class="dropdown-content">
+                                    <a href="estada.html" class="dropdown-item">
+                                        Cadastrar Estada
+                                    </a>
+                                    <a href="estada_listar.html" class="dropdown-item">
+                                        Listar Estada
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div style="text-align: center;">
+                <h1 class="title is-2 pt-4 pb-2">Clientes Cadastrados</h1>
+            </div>
+            <form action="" method="GET" class="pb-5">
+                <div class="field is-grouped is flex is-align-items is-flex-wrap-wrap">
+                    <label class="label p-2 mt-">Nome ou CPF do cliente: </label>
+                    <div class="control is-expanded">
+                        <input type="text" class="input" name="buscar" placeholder="Digite o nome ou o cpf do cliente">
+                    </div>
+                    <div class="control">
+                        <button type="submit" class="button is-success mr-1">
+                            Buscar
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <div class="table">
+                <table class="table is-bordered is-striped is-hoverable is-fullwidth">
+                    <thead>
+                        <tr>
+                            <th class="has-text-centered">Nome</th>
+                            <th class="has-text-centered">CPF</th>
+                            <th class="has-text-centered">Endereço</th>
+                            <th class="has-text-centered">Telefone</th>
+                            <th class="has-text-centered">E-mail</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Carlos</td>
+                            <td>555.555.555-55</td>
+                            <td>Rua cliente</td>
+                            <td>(55)9999-9999</td>
+                            <td>funcionario@hotmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>Carlos</td>
+                            <td>555.555.555-55</td>
+                            <td>Rua cliente</td>
+                            <td>(55)9999-9999</td>
+                            <td>funcionario@hotmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>Carlos</td>
+                            <td>555.555.555-55</td>
+                            <td>Rua cliente</td>
+                            <td>(55)9999-9999</td>
+                            <td>funcionario@hotmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>Carlos</td>
+                            <td>555.555.555-55</td>
+                            <td>Rua cliente</td>
+                            <td>(55)9999-9999</td>
+                            <td>funcionario@hotmail.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <section class="section pt-2" id="section_footer">
+        <footer class="footer has-background-black is-flex">
+            <div class="container has-text-centered is-flex">
+                <p class="is-size-6 has-text-white">@ 2022 Todos os direitos reservados.</p>
+            </div>
+            <div class="container_redeSociais mr-6">
+                <span class="icon has-text-white">
+                    <i class="fab fa-facebook-square fa-2x mr-2"></i>
+                    <i class="fab fa-twitter-square fa-2x mr-2"></i>
+                    <i class="fab fa-instagram-square fa-2x mr-2"></i>
+                </span>
+            </div>
+        </footer>
+    </section>
+</body>
+
+</html>
