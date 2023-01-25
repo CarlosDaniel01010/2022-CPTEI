@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+  <section class="section">
+        <div class="container">
+            <div style="text-align: center;">
+                <h1 class="title is-2 pt-4 pb-2">Clientes Cadastrados</h1>
+            </div>
+            <form action="" method="GET" class="pb-5">
+                <div class="field is-grouped is flex is-align-items is-flex-wrap-wrap">
+                    <label class="label p-2 mt-">Nome do Cliente: </label>
+                    <div class="control is-expanded">
+                        <input type="text" class="input" name="buscar" placeholder="Digite o nome do Cliente" value="{{ request.GET.buscar }}">
+                    </div>
+                    <div class="control">
+                        <button type="submit" class="button is-success mr-1">
+                            Buscar
+                        </button>
+                    </div>
+                </div>
+            </form>
+            {% if object_list %}
+            <div class="table">
+                <table class="table is-bordered is-striped is-hoverable is-fullwidth">
+                    <thead>
+                        <tr>
+                            <th class="has-text-centered">Nome</th>
+                            <th class="has-text-centered">Telefone</th>
+                            <th class="has-text-centered">E-mail</th>
+                            <th class="has-text-centered">CPF</th>
+                            <th class="has-text-centered">Endereço</th>
+                            <th class="has-text-centered">Cnpj</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for cliente in object_list %}
+                        <tr>
+                            <td><a href="#" data-toogle="modal" class="modal-target" data-bulma-modal="modal{{cliente.id}}" id="modal{{cliente.id}}">
+                              {{ cliente.nome }} </td>
+                            <td>{{ cliente.telefone }}</td>
+                            <td>{{ cliente.email }}</td>
+                            <td>{{ cliente.cpf }}</td>
+                            <td>{{ cliente.endereco }}</td>
+                            <td>{{ cliente.cnpj }}</td>
+                            <div class="modal" id="modal{{ cliente.id }}">
+                                <div class="modal-background"></div>
+                                <div class="modal-card">
+                                    <header class="modal-card-head">
+                                      <p class="modal-card-title">Cliente: {{ cliente.nome }}</p>
+                                      <button class="delete" aria-label="close" data-bulma-modal="close" id="btnClose"></button>
+                                    </header>
+                                  <footer class="modal-card-footer">
+                                    <p>Telefone: {{ cliente.telefone }}</p>
+                                  </footer>
+                                </div>
+                            </div>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% else %}
+            <h2>Náo existem Clientes Cadastrados!</h2>
+            {% endif %}
+        </div>
+            <div class="mt-3" style="text-align: center">
+            <span class="step-links">
+                {% if object_list.has_previous %}
+                    <a href="?page={{ object_list.has_previous_page_number }}">Anterior</a>
+                {% endif %}
+
+                <span class="current">
+                    <strong>{{ object_list.number }}</strong> de {{ object_list.paginator.num_pages }}
+                </span>
+
+                {% if object_list.has_next %}
+                    <a href="?page={{ object_list.has_next_page_number }}">Próxima</a>
+                {% endif %}
+            </span>
+        </div>
+    </section>
+{% endblock %}

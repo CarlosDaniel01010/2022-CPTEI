@@ -1,6 +1,9 @@
 from django.core.paginator import Paginator
 from django.shortcuts import render
-from django.views.generic import ListView
+from django.urls import reverse_lazy
+from django.views.generic import ListView, CreateView
+
+from funcionario.forms import FuncionarioModelForm
 from funcionario.models import Funcionario
 # Create your views here.
 
@@ -18,3 +21,11 @@ class FuncionarioView(ListView):
         paginator = Paginator(qs, 5)
         listagem = paginator.get_page(self.request.GET.get('page'))
         return listagem
+
+
+
+class FuncionarioAddView(CreateView):
+    form_class = FuncionarioModelForm
+    model = Funcionario
+    template_name = 'funcionario_form.html'
+    success_url = reverse_lazy('funcionarios')

@@ -36,7 +36,7 @@
                                     <a href="" class="dropdown-item ">
                                         Cadastrar Cliente
                                     </a>
-                                    <a href="" class="dropdown-item">
+                                    <a href="{% url 'clientes' %}" class="dropdown-item">
                                         Listar Clientes
                                     </a>
                                 </div>
@@ -52,7 +52,7 @@
                             </div>
                             <div class="dropdown-menu" id="dropdown-menu-funcionario" role="menu">
                                 <div class="dropdown-content">
-                                    <a class="dropdown-item" href="">
+                                    <a class="dropdown-item" href="{% url 'funcionario_adicionar' %}">
                                         Cadastrar Funcionário
                                     </a>
                                     <a class="dropdown-item" href="{% url 'funcionarios' %}">
@@ -93,7 +93,7 @@
                                     <a href="" class="dropdown-item">
                                         Cadastrar Estada
                                     </a>
-                                    <a href="" class="dropdown-item">
+                                    <a href="{% url 'estadas' %}" class="dropdown-item">
                                         Listar Estada
                                     </a>
                                 </div>

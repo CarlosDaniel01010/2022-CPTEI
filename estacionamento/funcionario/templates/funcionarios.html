@@ -8,7 +8,7 @@
             </div>
             <form action="" method="GET" class="pb-5">
                 <div class="field is-grouped is flex is-align-items is-flex-wrap-wrap">
-                    <label class="label p-2 mt-">Nome ou CPF do funcionário: </label>
+                    <label class="label p-2 mt-">Nome do funcionário: </label>
                     <div class="control is-expanded">
                         <input type="text" class="input" name="buscar" placeholder="Digite o nome do funcionário" value="{{ request.GET.buscar }}">
                     </div>
@@ -50,7 +50,7 @@
                                   <section class="modal-card-body is-flex is-justify-content-center">
                                     <div class="content">
                                       <p class="image is-128x128">
-                                        <img src="{{ funcionario.foto.url}}" class="img-fluid" alt="" />
+                                        <img src="{{ funcionarios.foto.url}}" class="img-fluid" alt="" />
                                       </p>
                                     </div>
                                   </section>
