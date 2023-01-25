@@ -11,6 +11,7 @@ class Veiculo(models.Model):
     class Meta:
         verbose_name = 'Veiculo'
         verbose_name_plural = 'Veiculos'
+        ordering = ['modelo', ]
 
     def __str__(self):
         return self.modelo
