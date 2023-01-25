@@ -1,0 +1,79 @@
+{% extends "base.html "%}
+{% block content %}
+
+    <section class="section px-0 ">
+        <div class="container_meio"></div>
+    </section>
+    <section class="section has-background-black">
+        <section class="wrap-boxes">
+            <div class="row">
+                <div class="">
+                    <ul class="boxes is-flex is-justify-content-space-around">
+                        <div class="container_icon has-background-white mx-1">
+                            <li>
+                                <a href="#" class="">
+                                    <img src="../static/img/5fc550edb4db0.png" alt="VAGAS COBERTAS" class="pt-5">
+                                    <h3 class="title is-6">VAGAS COBERTAS</h3>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="container_icon has-background-white mx-1">
+                            <li>
+                                <a href="#">
+                                    <img src="../static/img/5fc550ec2cc77.png" alt="SEGURANÇA 24H" class="pt-5">
+                                    <h3 class="title is-6 has-text-centered">SEGURANÇA 24H</h3>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="container_icon has-background-white mx-1">
+                            <li>
+                                <a href="#">
+                                    <img src="../static/img/5fc550eb61f34.png" alt="Preço Justo" class="pt-5">
+                                    <h3 class="title is-6 has-text-centered">Preço Justo</h3>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="container_icon has-background-white mx-1">
+                            <li>
+                                <a href="#">
+                                    <img src="../static/img/604229e44e842.png" alt="SOCORRO BATERIA" class="pt-5">
+                                    <h3 class="title is-6">SOCORRO BATERIA</h3>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="container_icon has-background-white mx-1">
+                            <li>
+                                <a href="#">
+                                    <img src="../static/img/604229e50c69d.png" alt="CALIBRAÇÃO DE PNEUS" class="pt-5">
+                                    <h3 class="title is-6">CALIBRAÇÃO DE PNEUS</h3>
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="section px-0 ">
+        <div class="container_semimeio">
+        </div>
+    </section>
+    <section class="hero is-link is-spaced has-background-success-dark">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title is-size-1">EstacioPark</h1>
+                <p class="title is-size-1">Ssitema de Estacionamento</p>
+                <p class="subtitle is-size-4">Sistema para Estacionamento de Automóveis</p>
+            </div>
+        </div>
+    </section>
+    {% block registros %}
+        {% include "registros.html "%}
+    {% endblock %}
+        <div class="container mx-3 my-3">
+            <a href="#">
+                <button class="button is-responsive">Voltar ao topo</button>
+            </a>
+        </div>
+
+{% endblock %}

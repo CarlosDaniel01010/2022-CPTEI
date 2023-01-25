@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+  <section class="section">
+        <div class="container">
+            <div style="text-align: center;">
+                <h1 class="title is-2 pt-4 pb-2">Veículos Cadastrados</h1>
+            </div>
+            <form action="" method="GET" class="pb-5">
+                <div class="field is-grouped is flex is-align-items is-flex-wrap-wrap">
+                    <label class="label p-2 mt-">Modelo ou Placa: </label>
+                    <div class="control is-expanded">
+                        <input type="text" class="input" name="buscar" placeholder="Digite o modelo ou a placa do veiculo" value="{{ request.GET.buscar }}">
+                    </div>
+                    <div class="control">
+                        <button type="submit" class="button is-success mr-1">
+                            Buscar
+                        </button>
+                    </div>
+                </div>
+            </form>
+            {% if object_list %}
+            <div class="table">
+                <table class="table is-bordered is-striped is-hoverable is-fullwidth">
+                    <thead>
+                        <tr>
+                            <th class="has-text-centered">Modelo</th>
+                            <th class="has-text-centered">Placa</th>
+                            <th class="has-text-centered">Cor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      {% for veiculo in object_list %}
+                        <tr>
+                            <td><a href="#" data-toogle="modal" class="modal-target" data-bulma-modal="modal{{veiculo.id}}" id="modal{{veiculo.id}}">
+                              {{ veiculo.modelo }}</a> </td>
+                            <td>{{ veiculo.placa }}</td>
+                            <td>{{ veiculo.cor }}</td>
+                            <div class="modal" id="modal{{ veiculo.id }}">
+                                <div class="modal-background"></div>
+                                <div class="modal-card">
+                                    <header class="modal-card-head">
+                                      <p class="modal-card-title">Veiculo: {{ veiculo.modelo }}</p>
+                                      <button class="delete" aria-label="close" data-bulma-modal="close" id="btnClose"></button>
+                                    </header>
+                                </div>
+                            </div>
+                        </tr>
+                      {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+          {% else %}
+            <h2>Náo existem Veículos Cadastrados!</h2>
+          {% endif %}
+        </div>
+    </section>
+{% endblock %}

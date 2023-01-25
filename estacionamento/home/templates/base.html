@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+{% block head %}
+    {% include "head.html "%}
+{% endblock %}
+<body>
+    <section class="section_logo is-flex is-justify-content-space-around has-background-success-dark" id="section_logo">
+        <div class="container_logo">
+            <a href="{% url 'index' %}">
+                <img class="logo pt-1" src="../static/img/Free_Sample_By_Wix (1).jpg" width="110">
+            </a>
+        </div>
+        <div class="container_nav pt-5">
+            <nav class="navbar pb-4 has-background-success-dark" role="navigation" aria-label="main navigation">
+                <div id="navbarBasicExample" class="navbar-menu is-size-5">
+                    <div class="navbar-start ">
+                        <a href="{% url 'index' %} class="navbar-item has-text-white has-background-success-dark">
+                            <span class="icon is-small mx-2 ">
+                                <i class="fas fa-home" aria-hidden="true"></i>
+                            </span>
+                            <span>
+                                Inicio
+                            </span>
+                        </a>
+                        <div class="navbar-item dropdown is-hoverable">
+                            <div class="dropdown-trigger">
+                                <li class="is-inline" aria-haspopup="true" aria-controls="dropdown-menu">
+                                    <a class="navbar-link has-text-white has-background-success-dark">
+                                        Cliente
+                                    </a>
+                                </li>
+                            </div>
+                            <div class="dropdown-menu" role="menu" id="dropdown-menu-cliente">
+                                <div class="dropdown-content">
+                                    <a href="" class="dropdown-item ">
+                                        Cadastrar Cliente
+                                    </a>
+                                    <a href="" class="dropdown-item">
+                                        Listar Clientes
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar-item dropdown is-hoverable">
+                            <div class="dropdown-trigger">
+                                <li class="is-inline" aria-haspopup="true" aria-controls="dropdown-menu">
+                                    <a href="#" class="navbar-link has-text-white has-background-success-dark">
+                                        Funcionário
+                                    </a>
+                                </li>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu-funcionario" role="menu">
+                                <div class="dropdown-content">
+                                    <a class="dropdown-item" href="">
+                                        Cadastrar Funcionário
+                                    </a>
+                                    <a class="dropdown-item" href="">
+                                        Listar Funcionários
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar-item dropdown is-hoverable">
+                            <div class="dropdown-trigger">
+                                <li class="is-inline" aria-haspopup="true" aria-controls="dropdown-menu">
+                                    <a href="#" class="navbar-link has-text-white has-background-success-dark">
+                                        Veículo
+                                    </a>
+                                </li>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu-veiculo" role="menu">
+                                <div class="dropdown-content">
+                                    <a href="" class="dropdown-item">
+                                        Cadastrar Veículo
+                                    </a>
+                                    <a href="{% url 'veiculos' %}" class="dropdown-item">
+                                        Listar Veículos
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar-item dropdown is-hoverable">
+                            <div class="dropdown-trigger">
+                                <li class="is-inline">
+                                    <a href="#" class="navbar-link has-text-white has-background-success-dark">
+                                        Estada
+                                    </a>
+                                </li>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu-estada" role="menu">
+                                <div class="dropdown-content">
+                                    <a href="" class="dropdown-item">
+                                        Cadastrar Estada
+                                    </a>
+                                    <a href="" class="dropdown-item">
+                                        Listar Estada
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+    {% block content %}{% endblock %}
+
+    {% block footer %}
+        {% include "footer.html "%}
+    {% endblock %}
+</body>
+</html>
