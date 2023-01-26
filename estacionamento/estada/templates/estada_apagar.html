@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+    <section class="section">
+      <div class="container">
+        <div class="columns is-mobile">
+          <div class="column is-half is-offset-one-quarter">
+            <h3 class="title is-size-3">Dados da Estada</h3>
+            <p class="p-2 mt-2"><strong>Funcionario: </strong>{{ object.funcionario }}</p>
+            <p class="p-2 mt-2"><strong>Veiculo: </strong>{{ object.veiculo }}</p>
+              <p class="p-2 mt-2"><strong>Valor: </strong>{{ object.valor }}</p>
+            <form method="POST" enctype="multipart/form-data">
+              {% csrf_token %}
+              <p class="ml-2">Confirmar exclusão da Estada "{{ object }}"?</p>
+              <br>
+              <button class="button is-link is-success" type="submit">Apagar</button>
+              <button class="button is-danger is-pulled-right" type="reset">
+                <a href="{% url 'estadas' %}">Cancelar</a>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}

@@ -1,6 +1,9 @@
 from django import forms
 from .models import Funcionario
 
+
+
+
 class FuncionarioModelForm(forms.ModelForm):
     class Meta:
         model = Funcionario
@@ -16,7 +19,7 @@ class FuncionarioModelForm(forms.ModelForm):
                 attrs={'class': 'input', 'type': 'text', 'placeholder': 'Digite  o Cpf'}),
             'endereco': forms.TextInput(
                 attrs={'class': 'input', 'type': 'text', 'placeholder': 'Digite  o endereço do Funcionário'}),
-            'funcao': forms.TextInput(
-                attrs={'class': 'input', 'type': 'text', 'placeholder': 'Digite  a função do Funcionário'}),
+            'funcao': forms.Select(
+                attrs={'class': 'input', 'placeholder': 'Função do Funcionário'}),
             'foto': forms.FileInput(attrs={'class': 'input', 'type': 'file'})
         }

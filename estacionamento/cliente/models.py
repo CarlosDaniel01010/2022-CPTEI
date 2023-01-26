@@ -4,7 +4,7 @@ from home.models import Pessoa
 # Create your models here.
 
 class Cliente(Pessoa):
-    cnpj = models.CharField('Cnpj', max_length=25, help_text='Cnpj', blank=True, null=True)
+    cnpj = models.CharField('Cnpj', max_length=25, help_text='Cnpj Completo', blank=True, null=True, unique=True)
 
     class Meta:
         verbose_name = 'Cliente'

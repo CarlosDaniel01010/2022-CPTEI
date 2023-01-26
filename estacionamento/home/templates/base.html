@@ -8,7 +8,7 @@
     <section class="section_logo is-flex is-justify-content-space-around has-background-success-dark" id="section_logo">
         <div class="container_logo">
             <a href="{% url 'index' %}">
-                <img class="logo pt-1" src="../static/img/Free_Sample_By_Wix (1).jpg" width="110">
+                <img class="logo pt-1" src="{% static 'img/Free_Sample_By_Wix (1).jpg' %}" width="110">
             </a>
         </div>
         <div class="container_nav pt-5">
@@ -90,7 +90,7 @@
                             </div>
                             <div class="dropdown-menu" id="dropdown-menu-estada" role="menu">
                                 <div class="dropdown-content">
-                                    <a href="" class="dropdown-item">
+                                    <a href="{% url 'estada_adicionar' %}" class="dropdown-item">
                                         Cadastrar Estada
                                     </a>
                                     <a href="{% url 'estadas' %}" class="dropdown-item">
@@ -104,6 +104,9 @@
             </nav>
         </div>
     </section>
+
+    {% include "messages.html" %}
+
     {% block content %}{% endblock %}
 
     {% block footer %}

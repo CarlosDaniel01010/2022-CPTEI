@@ -7,16 +7,16 @@ from home.models import Pessoa
 
 class Funcionario(Pessoa):
     CARGOS_OPCOES = (
-        ('N', '---------'),
-        ('C', 'CEO'),
-        ('P', 'Presidente'),
-        ('D', 'Diretor'),
-        ('G', 'Gerente'),
-        ('S', 'Supervisor'),
-        ('A', 'Assistente'),
+        ('Nenhum', 'Nenhum'),
+        ('CEO', 'CEO'),
+        ('Presidente', 'Presidente'),
+        ('Diretor', 'Diretor'),
+        ('Gerente', 'Gerente'),
+        ('Supervisor', 'Supervisor'),
+        ('Assistente', 'Assistente'),
     )
 
-    funcao = models.CharField('Função', max_length=30, help_text='Função na Empresa')
+    funcao = models.CharField('Função', max_length=30, help_text='Função na Empresa', choices=CARGOS_OPCOES, default='N')
     foto = StdImageField('Foto', upload_to='funcionarios',
                          variations={'thumbnail': {'width': 100, 'height': 100, 'crop': True}},
                          delete_orphans=True, null=True, blank=True)

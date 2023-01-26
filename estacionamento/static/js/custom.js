@@ -23,14 +23,13 @@ window.onclick = function(event) {
 	}
 };
 
-function formPessoaFisica() {
-            document.getElementById("pessoa-fisica").style.display = 'block';
-
-            document.getElementById("pessoa-juridica").style.display = 'none';
-}
-
-function formPessoaJuridica() {
-            document.getElementById("pessoa-juridica").style.display = 'block';
-
-            document.getElementById("pessoa-fisica").style.display = 'none';
-}
+function geraPdf(imprimir,form){
+    var formulario = document.getElementById(form)
+    document.getElementById('imprimir').value = imprimir;
+    if(imprimir == 'pdf'){
+        formulario.setAttribute("target", "_blank");
+    }else{
+        formulario.setAttribute("target", "_self");
+    }
+    formulario.submit();
+};
