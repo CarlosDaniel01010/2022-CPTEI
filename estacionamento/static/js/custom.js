@@ -22,3 +22,15 @@ window.onclick = function(event) {
 		});	 	
 	}
 };
+
+function formPessoaFisica() {
+            document.getElementById("pessoa-fisica").style.display = 'block';
+
+            document.getElementById("pessoa-juridica").style.display = 'none';
+}
+
+function formPessoaJuridica() {
+            document.getElementById("pessoa-juridica").style.display = 'block';
+
+            document.getElementById("pessoa-fisica").style.display = 'none';
+}

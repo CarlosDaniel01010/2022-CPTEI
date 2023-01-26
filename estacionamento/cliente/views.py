@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic import ListView, CreateView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.core.paginator import Paginator
+
+from cliente.forms import ClienteModelForm
 from cliente.models import Cliente
 # Create your views here.
 
@@ -20,3 +22,21 @@ class ClienteView(ListView):
         return listagem
 
 
+class ClienteAddView(CreateView):
+    form_class = ClienteModelForm
+    model = Cliente
+    template_name = 'cliente_form.html'
+    success_url = reverse_lazy('clientes')
+
+
+class ClienteUpDateView(UpdateView):
+    form_class = ClienteModelForm
+    model = Cliente
+    template_name = 'cliente_form.html'
+    success_url = reverse_lazy('clientes')
+
+
+class ClienteDeleteView(DeleteView):
+    model = Cliente
+    template_name = 'cliente_apagar.html'
+    success_url = reverse_lazy('clientes')

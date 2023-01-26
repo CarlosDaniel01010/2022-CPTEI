@@ -29,6 +29,7 @@
                             <th class="has-text-centered">E-mail</th>
                             <th class="has-text-centered">CPF</th>
                             <th class="has-text-centered">Endereço</th>
+                            <th class="has-text-centered" style="width: 100px;">Ações</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -40,6 +41,20 @@
                             <td>{{ funcionario.email }}</td>
                             <td>{{ funcionario.cpf }}</td>
                             <td>{{ funcionario.endereco }}</td>
+                            <td class="has-text-centered is-flex is-flex-wrap-nowrap is-justify-content-center">
+                                <a href="{% url 'funcionario_editar' funcionario.pk %}">
+                                    <span class="icon">
+                                        <i class="fas fa-edit"></i>
+                                    </span>
+                                </a>
+
+                                <a href="{% url 'funcionario_apagar' funcionario.pk %}">
+                                    <span class="icon">
+                                        <i class="far fa-trash-alt"></i>
+                                    </span>
+                                </a>
+
+                            </td>
                             <div class="modal" id="modal{{ funcionario.id }}">
                                 <div class="modal-background"></div>
                                 <div class="modal-card">

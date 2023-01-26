@@ -6,6 +6,16 @@ from home.models import Pessoa
 # Create your models here.
 
 class Funcionario(Pessoa):
+    CARGOS_OPCOES = (
+        ('N', '---------'),
+        ('C', 'CEO'),
+        ('P', 'Presidente'),
+        ('D', 'Diretor'),
+        ('G', 'Gerente'),
+        ('S', 'Supervisor'),
+        ('A', 'Assistente'),
+    )
+
     funcao = models.CharField('Função', max_length=30, help_text='Função na Empresa')
     foto = StdImageField('Foto', upload_to='funcionarios',
                          variations={'thumbnail': {'width': 100, 'height': 100, 'crop': True}},

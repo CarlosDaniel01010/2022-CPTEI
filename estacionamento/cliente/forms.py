@@ -1,10 +1,10 @@
 from django import forms
-from .models import Funcionario
+from .models import Cliente
 
-class FuncionarioModelForm(forms.ModelForm):
+class ClienteModelForm(forms.ModelForm):
     class Meta:
-        model = Funcionario
-        fields = ['nome', 'telefone', 'email', 'cpf', 'endereco', 'funcao', 'foto']
+        model = Cliente
+        fields = ['nome', 'telefone', 'email', 'cpf', 'endereco','cnpj']
         widgets = {
             'nome': forms.TextInput(
                 attrs={'class': 'input', 'type': 'text', 'placeholder': 'Digite  o nome do Funcionário'}),
@@ -16,7 +16,6 @@ class FuncionarioModelForm(forms.ModelForm):
                 attrs={'class': 'input', 'type': 'text', 'placeholder': 'Digite  o Cpf'}),
             'endereco': forms.TextInput(
                 attrs={'class': 'input', 'type': 'text', 'placeholder': 'Digite  o endereço do Funcionário'}),
-            'funcao': forms.TextInput(
-                attrs={'class': 'input', 'type': 'text', 'placeholder': 'Digite  a função do Funcionário'}),
-            'foto': forms.FileInput(attrs={'class': 'input', 'type': 'file'})
+            'cnpj': forms.TextInput(
+                attrs={'class': 'input', 'type': 'text', 'placeholder': 'Digite  o Cnpj'}),
         }

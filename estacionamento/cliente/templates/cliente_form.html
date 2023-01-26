@@ -3,7 +3,7 @@
   <section class="section_cad mb-6 pt-5 mt-5">
     <div class="container_cad_vei has-background-black-bis mt-4">
       <div class="container_title pb-5 ml-5">
-        <h1 class="title has-text-white pt-5 ml-5">Cadastro do Carro</h1>
+        <h1 class="title has-text-white pt-5 ml-5">Cadastro de Cliente</h1>
       </div>
       <form action="" class="form ml-5" id="" method="POST">
         {% csrf_token %}
@@ -18,6 +18,18 @@
             {% endfor %}
           </div>
         {% endfor %}
+        <div class="field ml-5 pt-2">
+                    <div class="control is-flex flex-direction-row">
+                        <label class="label has-text-white">
+                            <input type="radio" name="question" onchange="formPessoaFisica();" value="1">
+                            Pessoa Física
+                        </label>
+                        <label class="label has-text-white ml-5">
+                            <input type="radio" name="question" value="2" onchange="formPessoaJuridica()">
+                            Pessoa Juridica
+                        </label>
+                    </div>
+                </div>
         <div class="container_buttons pt-5">
         <div class="buttons pt-5">
           <input class="button is-success is-medium" type="submit" value="Cadastrar" style="margin: 0" />

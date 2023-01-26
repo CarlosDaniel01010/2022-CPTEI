@@ -8,9 +8,9 @@
             </div>
             <form action="" method="GET" class="pb-5">
                 <div class="field is-grouped is flex is-align-items is-flex-wrap-wrap">
-                    <label class="label p-2 mt-">Modelo ou Placa: </label>
+                    <label class="label p-2 mt-">Modelo: </label>
                     <div class="control is-expanded">
-                        <input type="text" class="input" name="buscar" placeholder="Digite o modelo ou a placa do veiculo" value="{{ request.GET.buscar }}">
+                        <input type="text" class="input" name="buscar" placeholder="Digite o modelo do veiculo" value="{{ request.GET.buscar }}">
                     </div>
                     <div class="control">
                         <button type="submit" class="button is-success mr-1">
@@ -28,6 +28,7 @@
                             <th class="has-text-centered">Placa</th>
                             <th class="has-text-centered">Cor</th>
                             <th class="has-text-centered">Cliente</th>
+                            <th class="has-text-centered" style="width: 100px;">Ações</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -38,6 +39,20 @@
                             <td>{{ veiculo.placa }}</td>
                             <td>{{ veiculo.cor }}</td>
                             <td>{{ veiculo.cliente }}</td>
+                            <td class="has-text-centered is-flex is-flex-wrap-nowrap is-justify-content-center">
+                                <a href="{% url 'veiculo_editar' veiculo.pk %}">
+                                    <span class="icon">
+                                        <i class="fas fa-edit"></i>
+                                    </span>
+                                </a>
+
+                                <a href="{% url 'veiculo_apagar' veiculo.pk %}">
+                                    <span class="icon">
+                                        <i class="far fa-trash-alt"></i>
+                                    </span>
+                                </a>
+
+                            </td>
                             <div class="modal" id="modal{{ veiculo.id }}">
                                 <div class="modal-background"></div>
                                 <div class="modal-card">

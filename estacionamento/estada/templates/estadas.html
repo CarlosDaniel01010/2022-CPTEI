@@ -6,11 +6,15 @@
             <div style="text-align: center;">
                 <h1 class="title is-2 pt-4 pb-2">Listagem de Estada</h1>
             </div>
-            <form action="" method="GET" class="pb-5">
+            <form action="" method="GET" class="pb-5" id="formListaEstada">
                 <div class="field is-grouped is flex is-align-items is-flex-wrap-wrap">
-                    <label class="label p-2 mt-">Buscar Algo: </label>
+                    <label class="label p-2 mt-">{{ form.funcionario.label }}</label>
                     <div class="control is-expanded">
-                        <input type="text" class="input" name="buscar" placeholder="Digite algo" value="{{ request.GET.buscar }}">
+                        {{ form.funcionario }}
+                    </div>
+                    <label class="label p-2 mt-">{{ form.veiculo.label }}</label>
+                    <div class="control is-expanded">
+                        {{ form.veiculo }}
                     </div>
                     <div class="control">
                         <button type="submit" class="button is-success mr-1">

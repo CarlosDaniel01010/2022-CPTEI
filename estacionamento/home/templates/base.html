@@ -33,7 +33,7 @@
                             </div>
                             <div class="dropdown-menu" role="menu" id="dropdown-menu-cliente">
                                 <div class="dropdown-content">
-                                    <a href="" class="dropdown-item ">
+                                    <a href="{% url 'cliente_adicionar' %}" class="dropdown-item ">
                                         Cadastrar Cliente
                                     </a>
                                     <a href="{% url 'clientes' %}" class="dropdown-item">
@@ -71,7 +71,7 @@
                             </div>
                             <div class="dropdown-menu" id="dropdown-menu-veiculo" role="menu">
                                 <div class="dropdown-content">
-                                    <a href="" class="dropdown-item">
+                                    <a href="{% url 'veiculo_adicionar' %}" class="dropdown-item">
                                         Cadastrar Veículo
                                     </a>
                                     <a href="{% url 'veiculos' %}" class="dropdown-item">
