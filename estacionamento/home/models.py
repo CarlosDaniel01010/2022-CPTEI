@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 
+# Aqui que se define as classes da aplicação, os atributos/campos e os seus respectivos tipos.
 class Pessoa(models.Model):
     nome = models.CharField('Nome', max_length=50, help_text='Nome Completo')
     telefone = models.CharField('Telefone', max_length=15, help_text='Número do telefone')

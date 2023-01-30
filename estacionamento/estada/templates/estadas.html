@@ -25,7 +25,7 @@
                     </div>
                     {% if object_list %}
                         <div class="control">
-                        <button type="submit" class="button is-success mr-1" onclick="geraPdf('', 'formListaEstadas');">
+                        <button type="submit" class="button is-success mr-1" onclick="geraPdf('pdf', 'formListaEstadas');">
                             Imprimir
                         </button>
                         </div>
@@ -50,7 +50,7 @@
                       {% for estada in object_list %}
                         <tr>
                             <td><a href="#" data-toogle="modal" class="modal-target" data-bulma-modal="modal{{estada.id}}" id="modal{{estada.id}}">
-                              {{ estada.entrada }}</td>
+                                {{ estada.entrada }}</a></td>
                             <td>{{ estada.saida }}</td>
                             <td>{{ estada.funcionario }}</td>
                             <td>{{ estada.veiculo }}</td>

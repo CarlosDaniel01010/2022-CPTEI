@@ -15,13 +15,13 @@
                         <input type="text" class="input" name="buscar" placeholder="Digite o nome do funcionário" value="{{ request.GET.buscar }}">
                     </div>
                     <div class="control">
-                        <button type="submit" class="button is-success mr-1" onclick="geraPdf('', 'formListaFuncionarios');">
+                        <button type="submit" class="button is-success mr-1" onclick="geraPdf('','formListaFuncionarios');">
                             Buscar
                         </button>
                     </div>
                         {% if object_list %}
                         <div class="control">
-                        <button type="submit" class="button is-success mr-1" onclick="geraPdf('', 'formListaFuncionarios');">
+                        <button type="submit" class="button is-success mr-1" onclick="geraPdf('pdf','formListaFuncionarios');">
                             Imprimir
                         </button>
                         </div>

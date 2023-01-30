@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 
+# Aqui que se define as classes da aplicação, os atributos/campos e os seus respectivos tipos.
 class Veiculo(models.Model):
     modelo = models.CharField('Modelo', max_length=30, help_text='Modelo do Carro')
     placa = models.CharField('Placa', max_length=12, help_text='Placa do Carro')

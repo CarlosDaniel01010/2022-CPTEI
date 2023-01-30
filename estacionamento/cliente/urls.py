@@ -1,6 +1,7 @@
 from django.urls import path
 from .views import ClienteView, ClienteAddView, ClienteUpDateView, ClienteDeleteView
 
+#Rotas apontadas para as Classes da View.
 urlpatterns = [
     path('clientes', ClienteView.as_view(), name='clientes'),
     path('cliente/adicionar', ClienteAddView.as_view(), name='cliente_adicionar'),

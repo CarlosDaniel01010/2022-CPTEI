@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 
+# Aqui que se define as classes da aplicação, os atributos/campos e os seus respectivos tipos.
 class Estada(models.Model):
     entrada = models.TimeField('Entrada', help_text='Hora de Entrada')
     saida = models.TimeField('Saída', help_text='Hora de Saída')

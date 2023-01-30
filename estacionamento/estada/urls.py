@@ -1,6 +1,7 @@
 from django.urls import path
 from .views import EstadaView, EstadaAddView, EstadaUpDateView, EstadaDeleteView
 
+#Rotas apontadas para as Classes da View.
 urlpatterns = [
     path('estadas', EstadaView.as_view(), name='estadas'),
     path('estada/adicionar', EstadaAddView.as_view(), name='estada_adicionar'),

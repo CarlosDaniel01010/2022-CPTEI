@@ -25,4 +25,4 @@ urlpatterns = [
     path('', include('funcionario.urls')),
     path('', include('estada.urls')),
     path('', include('cliente.urls')),
-]+ static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

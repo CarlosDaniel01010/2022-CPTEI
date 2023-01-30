@@ -4,6 +4,8 @@ from home.models import Pessoa
 
 
 # Create your models here.
+# Aqui que se define as classes da aplicação, os atributos/campos e os seus respectivos tipos.
+# Está herdando da classe Pessoa os campos la de Home.models
 
 class Funcionario(Pessoa):
     CARGOS_OPCOES = (
