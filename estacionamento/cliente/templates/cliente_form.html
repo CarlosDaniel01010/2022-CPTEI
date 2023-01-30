@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "base.html"%}
 {% block content %}
   <section class="section_cad mb-6 pt-5 mt-5">
     <div class="container_cad_vei has-background-black-bis mt-4">
@@ -20,8 +20,10 @@
         {% endfor %}
         <div class="container_buttons pt-5">
         <div class="buttons pt-5">
-          <input class="button is-success is-medium" type="submit" value="Cadastrar" style="margin: 0" />
-          <input class="button is-danger is-medium" type="reset" value="Cancelar" style="margin: 0" />
+          <button class="button is-success is-medium" type="submit" style="margin: 0;">Cadastrar</button>
+          <button class="button is-danger is-medium" type="reset" style="margin: 0;">
+            <a href="{% url 'clientes' %}">Cancelar</a>
+          </button>
         </div>
       </div>
       </form>

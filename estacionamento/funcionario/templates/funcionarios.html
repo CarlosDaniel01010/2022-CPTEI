@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "base.html"%}
 {% load static %}
 {% block content %}
     {% if object_list %}
@@ -9,7 +9,7 @@
                 </div>
                 <form action="" method="GET" class="pb-5" id="formListaFuncionarios">
                     <input type="hidden" name="imprimir" id="imprimir" value="">
-                    <div class="field is-grouped is flex is-align-items is-flex-wrap-wrap">
+                    <div class="field is-grouped is-flex is-align-items is-flex-wrap-wrap">
                         <label class="label p-2 mt-">Nome do funcionário: </label>
                     <div class="control is-expanded">
                         <input type="text" class="input" name="buscar" placeholder="Digite o nome do funcionário" value="{{ request.GET.buscar }}">

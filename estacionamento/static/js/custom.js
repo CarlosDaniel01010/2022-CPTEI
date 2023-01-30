@@ -26,7 +26,6 @@ window.onclick = function(event) {
 function geraPdf(imprimir, form){
     var formulario = document.getElementById(form)
     document.getElementById('imprimir').value = imprimir;
-    console.log(imprimir)
     if(imprimir == 'pdf'){
         formulario.setAttribute("target", "_blank");
     }else{
